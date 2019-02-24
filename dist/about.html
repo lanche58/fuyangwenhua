@@ -47,11 +47,11 @@
         <dd><a href="index.html">首页</a></dd>
         <dd><a href="about.html">关于符阳</a>
             <div class="mtv">
-                <a href="about.html?#ab1">公司简介</a>
-                <a href="about.html?#ab2">组织架构</a>
-                <a href="about.html?#ab3">企业荣誉</a>
-                <a href="about.html?#ab4">大事迹</a>
-                <a href="about.html?#ab5">分公司简介</a>
+                <a href="about.html?#ab1" class="about-anchor">公司简介</a>
+                <a href="about.html?#ab2" class="about-anchor">组织架构</a>
+                <a href="about.html?#ab3" class="about-anchor">企业荣誉</a>
+                <a href="about.html?#ab4" class="about-anchor">大事迹</a>
+                <a href="about.html?#ab5" class="about-anchor">分公司简介</a>
             </div>
         </dd>
         <dd><a href="culture.html">品牌文化</a>
@@ -228,7 +228,7 @@
                     <p>泸州荔枝红文化传媒有限责任公司成立于2017年2月，是四川符阳文化旅游开发有限公司的全资子公司，注册资本1000万元。</p>
                     <p>公司秉承“激情、创想、品质、无限”的理念，恪守“细心、精心、用心、称心”的宗旨，应时代潮流，领文化风骚，与天下朋友携手同行，共创未来！</p>
                 </div>
-                <div class="more"><a href="#" class="btn ab-more">了解更多</a></div>
+                <div class="more"><a href="about1.html" class="btn ab-more">了解更多</a></div>
             </div>
             <div class="pic"><img src="img/ab_i3.jpg" alt=""></div>
         </div>
@@ -306,12 +306,36 @@
             }
             ]
         });
+
         $('.honor-list .item a').bind(_click, function() {
             var $this = $(this);
             var num = parseInt($this.attr('data-big-num'));
             openshowImg(num,maxnum); 
         });
 
+        $('.pnav a').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
+
+        $('.mtv .about-anchor').bind(_click, function(e) {
+            var hash = $(this).attr('href').split('#')[1];
+            if(hash){
+                e.preventDefault();
+                var w = $menuBox.width();
+                $('html').removeClass('open');
+                $menuBtn.removeClass('active');
+                $('.menuBlack').stop().fadeOut(600);
+                $menuBox.stop(false,false).animate({right:-w+"px"},function(){
+                    $(this).hide();
+                });
+                navItem = 0;
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+            }
+        });
     })
 </script>
 </body>

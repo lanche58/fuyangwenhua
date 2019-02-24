@@ -26,8 +26,8 @@
         </div>
     </div>
     <ul class="nav">
-        <li><a href="index.html" class="act">首页</a></li>
-        <li><a href="about.html">关于符阳</a></li>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html" class="act">关于符阳</a></li>
         <li><a href="culture.html">品牌文化</a></li>
         <li><a href="news.html">新闻中心</a></li>
         <li><a href="project.html">项目投资</a></li>
@@ -90,33 +90,48 @@
 <div class="menuBlack"></div>
 <div class="mtop"></div>
 
-<div class="banner-box">
-    <div class="banner cg-s banner-arrow u-slick">
-        <div class="item">
-            <div class="pic2"><img src="img/banner_1.jpg" alt=""></div>
-            <div class="txts">
-                <div class="pw">
-                    <h2 class="ch trans transY">坚持文化传承与创新<br>以高标准、严要求将工作做到至善至美</h2>
-                    <h3 class="en trans transY dly-1">Adhere to cultural heritage and innovation.<br>With high standards and strict demands, we will do our best to the best.</h3>
-                    <div class="more trans transY dly-2"><a href="about1.html" class="btn ab-more">了解更多</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="pic2"><img src="img/banner_1.jpg" alt=""></div>
-            <div class="txts">
-                <div class="pw">
-                    <h2 class="ch trans transY">坚持文化传承与创新<br>以高标准、严要求将工作做到至善至美</h2>
-                    <h3 class="en trans transY dly-1">Adhere to cultural heritage and innovation.<br>With high standards and strict demands, we will do our best to the best.</h3>
-                    <div class="more trans transY dly-2"><a href="about1.html" class="btn ab-more">了解更多</a></div>
-                </div>
+<div class="page-top">
+    <div class="pbanner scroll-animation">
+        <div class="pic2"><img src="img/about_banner.jpg" alt=""></div>
+        <div class="txts">
+            <div class="pw">
+                <h1 class="ch splwo fadeIn">关于我们</h1>
+                <h2 class="en splwo fadeIn">About Us</h2>
             </div>
         </div>
     </div>
     
+    <div class="pnav">
+        <ul class="fib">
+            <li class="ib"><a href="about.html?#ab1">公司简介</a></li>
+            <li class="ib"><a href="about.html?#ab2">组织架构</a></li>
+            <li class="ib"><a href="about.html?#ab3">企业荣誉</a></li>
+            <li class="ib"><a href="about.html?#ab4">大事迹</a></li>
+            <li class="ib"><a href="about.html?#ab5" class="act">分公司简介</a></li>
+        </ul>
+    </div>
+    
 </div>
 
-<div class="container">
+<div class="container page-bg">
+    <div class="ab6 pw">
+        <div class="freeTx">
+            <p>泸州荔枝红文化传媒有限责任公司成立于2017年2月，是四川符阳文化旅游开发有限公司的全资子公司，注册资本1000万元。</p>
+            <p>公司秉承“<strong>激情、创想、品质、无限</strong>”的理念，恪守“<strong>细心、精心、用心、称心</strong>”的宗旨，应时代潮流，领文化风骚，与天下朋友携手同行，共创未来！</p>
+            <br>
+            <p><img src="img/ab_i4.jpg" alt=""></p>
+            <br>
+            <p><strong>公司业务范围</strong></p>
+            <p>影视节目制作；礼仪庆典服务；展览展示服务；市场营销策划；摄影服务；广告设计、制作、代理、发布；企事业单位形象设计；印刷；公关活动策划；景区门票销售；停车场收费；装饰装修工程；室内设计；电子商务等。</p>
+            <br>
+            <p><strong>其中影视节目制作包含</strong></p>
+            <p>宣传片：企业宣传片、形象片、专题片、活动片</p>
+            <p>微电影：商业微电影、非商业微电影、爱情微电影、婚礼微电影</p>
+            <p>TVC广告片：TVC广告片拍摄、制作</p>
+            <p>后期制作：调色、剪辑、包装等</p>
+            <p>平面设计：商业设计、活动海报设计、VI企业形象设计、包装设计等</p>
+        </div>
+    </div>
     
 </div>
 
@@ -168,43 +183,5 @@
 <script src="js/plugin.js"></script>
 
 <script src="js/page.js"></script>
-<script>
-    function indexBox() {
-        if(!isMobile){
-            $('.banner').css({ height: w_height - $mtoph });
-            $('.banner .item').css({ height: w_height - $mtoph });
-            setImgMax($('.banner .pic2'), 1920, 900, w_width, w_height - $mtoph);
-        }else{
-            $('.banner').css({ height: 'auto' });
-            $('.banner .item').css({ height: 'auto' });
-            $('.banner .pic2').attr({ 'style': '' });
-        }
-    }
-    indexBox();
-    $(window).resize(function() {
-        indexBox();
-    });
-    $(function(){
-        $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
-            $('.banner .item').first().addClass('active');
-        });
-
-        // $('.banner .line i').css({width:0}).stop().animate({width:100+'%'},4800,'linear');
-
-        $('.banner').slick({
-            speed: 1000,
-            arrows: true,
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            fade: true,
-            pauseOnHover: false
-        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            $('.banner .item').removeClass('active');
-            $('.banner .item').eq(nextSlide).addClass('active');
-            // $('.banner .line i').css({width:0}).stop().animate({width:100+'%'},5800,'linear');
-        });
-    })
-</script>
 </body>
 </html>
