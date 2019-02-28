@@ -543,13 +543,6 @@
         }
     }
 }
-.banner{
-    .txts{ @include plr; top: 0; padding-top: (228 / 1920) * 100%; color: #fff; }
-    .ch{ position: relative; margin-bottom: 34px - 9px; font-size: 50px; line-height: 1.2; 
-        &:before{ @include ba; top: 5px; right: 100%; margin-right: 20px; width: 30px; height: 59px; background: url(../images/seal.png) no-repeat; }
-    }
-    .en{ margin-bottom: 50px; font-size: 18px; line-height: 1.2; }
-}
 .banner-arrow{
     .slick-arrow{ top: auto; right: auto; bottom: 50px; left: 50%; margin-left: -600px; @include c(50px); background: $mc1; font-size: 12px; font-weight: bold; color: #fff; line-height: 50px; 
         @media screen and (min-width:1025px) {
@@ -557,7 +550,80 @@
         }
     }
     .slick-next{ margin-left: -600px + 60px; }
-    .slick-dots{ display: none !important; }
+}
+.banner{
+    .txts{ @include plr; top: 0; padding-top: (228 / 1920) * 100%; color: #fff; 
+        @media screen and (max-width:1366px) {
+            padding-top: 8%;
+        }
+        @media screen and (max-width:861px) {
+            padding-top: 10%;
+        }
+        @media screen and (max-width:481px) {
+            padding-top: 0; top: 50%; transform: translateY(-50%);
+        }
+    }
+    .ch{ position: relative; margin-bottom: 34px - 9px; font-size: 50px; line-height: 1.2; 
+        @media screen and (max-width:1366px) {
+            font-size: 40px; margin-bottom: 20px;
+        }
+        @media screen and (max-width:861px) {
+            font-size: 26px; margin-bottom: 15px;
+        }
+        @media screen and (max-width:601px) {
+            font-size: 22px; margin-bottom: 10px;
+        }
+        @media screen and (max-width:481px) {
+            font-size: 18px;
+        }
+        &:before{ @include ba; top: 5px; right: 100%; margin-right: 20px; width: 30px; height: 59px; background: url(../images/seal.png) no-repeat; 
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+        }
+    }
+    .en{ margin-bottom: 50px; font-size: 18px; line-height: 1.2; 
+        @media screen and (max-width:1366px) {
+            font-size: 16px; margin-bottom: 40px;
+        }
+        @media screen and (max-width:861px) {
+            font-size: 12px; margin-bottom: 30px;
+        }
+        @media screen and (max-width:601px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width:481px) {
+            margin-bottom: 0; font-size: 10px;
+        }
+    }
+    .slick-arrow{ 
+        @media screen and (max-width:1366px) {
+            margin-left: -500px;
+        }
+        @media screen and (max-width:1024px) {
+            display: none !important;
+        }
+    }
+    .slick-next{
+        @media screen and (max-width:1366px) {
+            margin-left: -500px + 60px;
+        }
+    }
+    .slick-dots{ display: none !important; 
+        @media screen and (max-width:1024px) {
+            display: block !important;
+        }
+        li{ background: #fff; }
+        .slick-active{ background: $mc2; }
+    }
+    .ab-more{
+        @media screen and (max-width:601px) {
+            width: 80px; height: 30px; line-height: 30px; font-size: 12px;
+        }
+        @media screen and (max-width:481px) {
+            display: none;
+        }
+    }
 }
 .cul1{
     padding: 90px 0 210px 0; background: url(../images/cul_bg.jpg) no-repeat center bottom;
@@ -1489,9 +1555,20 @@
 }
 .job-info{
     font-size: 20px; font-weight: bold; color: $mc1; text-align: center;
+    @media screen and (max-width:601px) {
+        font-size: 16px;
+    }
 }
-.cta1{ padding: 100px 0; }
-#map{ height: 545px; }
+.cta1{ padding: 100px 0; 
+    @media screen and (max-width:601px) {
+        padding: 16.67vw 0;
+    }
+}
+#map{ height: 545px; 
+    @media screen and (max-width:601px) {
+        height: 90.83vw;
+    }
+}
 .contact-title{ line-height: 1.4; font-size: 24px; font-weight: bold; color: $fc1; 
     @media screen and (max-width:481px) {
         font-size: 22px;
@@ -1528,7 +1605,12 @@
         }
     }
 }
-.cta2{ padding: 70px 0 100px 0; }
+.cta2{ padding: 70px 0 100px 0; 
+    @media screen and (max-width:601px) {
+       padding: 11.67vw 0 16.67vw 0; 
+    }
+    .job-list{ margin-top: 25px; }
+}
 .job-search{
     .sele-list{ width: 65%; float: left;
         @media screen and (max-width:861px) {
@@ -1564,6 +1646,354 @@
     .search-btn{ display: block; position: absolute; top: 0; right: 0; width: 48px; height: 48px; background: $hc1; color: $fc1; line-height: 48px; text-align: center; font-size: 18px; 
         @media screen and (min-width:1025px) {
             &:hover{ background-color: $mc1; color: #fff; }
+        }
+    }
+}
+.job-list{
+    .t{ overflow: hidden; background: #fff; padding: (64px - 40px) / 2 0 (64px - 40px) / 2 40px; @include mt3;
+        @media screen and (max-width:1024px) {
+            padding-left: 5%;
+        }
+        > div{ position: relative; float: left; padding-left: 40px; @include bs; 
+            @media screen and (max-width:1024px) {
+                padding: 0;
+            }
+        }
+    }
+    .nowti{ line-height: 40px; }
+    .j1{ width: 22.4%; 
+        .ico{ background-image: url(../images/ico1.png); }
+        @media screen and (max-width:601px) {
+            width: 40%;
+        }
+    }
+    .j2{ width: 26.8%; 
+        .ico{ background-image: url(../images/ico2.png); }
+        @media screen and (max-width:601px) {
+            display: none;
+        }
+    }
+    .j3{ width: 26.5%; 
+        .ico{ background-image: url(../images/ico3.png); }
+        @media screen and (max-width:601px) {
+            width: 30%;
+        }
+    }
+    .j4{ width: 100% - 22.4% - 26.8% - 26.5%; 
+        .ico{ background-image: url(../images/ico4.png); }
+        @media screen and (max-width:601px) {
+            width: 30%;
+        }
+    }
+    .ico{ display: block; position: absolute; left: 0; top: 0; width: 40px; height: 40px; background-repeat: no-repeat; background-position: left center; 
+        @media screen and (max-width:1024px) {
+            display: none;
+        }
+    }
+    li:first-child{
+        .t{ background: $mc1; font-weight: bold; font-size: 16px; color: #fff; 
+            @media screen and (max-width:1024px) {
+                font-size: 14px;
+            }
+        }
+    }
+    li + li{ margin-top: 5px; 
+        .t{ cursor: pointer; }
+        @media screen and (min-width:1025px) {
+            &.act, &:hover{
+                .t{ background: $mc7; color: $mc1; }
+            }
+        }
+    }
+    .b{
+        background: #fff; padding: 40px 80px 80px 80px; margin-top: 2px; display: none;
+    }
+    .set-email{ margin-top: 80px; color: #fff; }
+}
+.set-email{ display: block; width: 176px; height: 46px; background: $mc1; color: #fff; line-height: 46px; text-align: center; 
+    @media screen and (min-width:1025px) {
+        &:hover{ background: $mc2; }
+    }
+}
+.banner-num{
+    position: absolute; z-index: 200; bottom: 55px; left: 50%; margin-left: -600px + 200px; padding-bottom: 14px; color: #fff; line-height: 1;
+    @media screen and (max-width:1366px) {
+        margin-left: -500px + 200px;
+    }
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+    .cnum{ font-size: 20px; }
+}
+.banner-line{
+    position: absolute; z-index: 200; bottom: 55px; right: 0; left: 50%; margin-left: -600px + 200px; height: 1px; background: #fff;
+    @media screen and (max-width:1366px) {
+        margin-left: -500px + 200px;
+    }
+    @media screen and (max-width:1024px) {
+        display: none;
+    }
+}
+#line{
+    position: absolute; top: -1px; left: 0; height: 3px; width: 0; background: $mc1;
+}
+.ix-news-l{ width: 45%; float: left; 
+    @media screen and (max-width:861px) {
+        width: 100%; float: none;
+    }
+    .pai{ padding-bottom: (380 / 540) * 100%; }
+    .item > a{ display: block; position: relative; color: #fff; }
+    .txts{ @include plr; bottom: 0; padding: 12px 90px 12px 0; @include b5; background: rgba(0,0,0,.6); overflow: hidden; }
+    .date{ width: 70px; float: left; margin-top: -3px; font-size: 12px; line-height: 1; text-align: center; 
+        span{ display: block; margin-bottom: 9px - 5px; font-size: 24px; }
+    }
+    .nowti{ border-left: 1px solid #fff; padding-left: 10px; font-size: 16px; line-height: 40px; }
+    .slick-dots{ left: auto; right: 0; bottom: (64px - 8px) / 2; width: 90px; 
+        li{ width: 8px; height: 8px; margin: 0 3px; background: #fff; 
+            @media screen and (min-width:1025px) {
+                &:hover{ background: $mc2; }
+            }
+        }
+        .slick-active{ background: $mc2; }
+    }
+} 
+.ix-news-r{ width: 53%; float: right; 
+    @media screen and (max-width:861px) {
+        width: 100%; float: none; margin-top: 35px;
+    }
+    @media screen and (max-width:601px) {
+        margin-top: 5.83vw;
+    }
+}
+.ix-news-tx{
+    border: 1px solid $hc1; height: 120px; padding: 20px 40px 0 30px; @include bs;
+    @media screen and (max-width:1366px) {
+        padding-right: 30px; height: 100px; padding-top: 15px;
+    }
+    @media screen and (max-width:1024px) {
+        height: 120px; padding-top: 20px;
+    }
+    @media screen and (max-width:601px) {
+        padding-left: 5%; padding-right: 5%; height: auto; padding-bottom: 20px;
+    }
+    .nowti{ margin-bottom: 10px; text-indent: 30px; color: $mc1; font-size: 18px; font-weight: bold; 
+        @media screen and (max-width:1366px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width:1024px) {
+            font-size: 18px;
+        }
+    }
+    .tx{ height: 24px * 2; 
+        @media screen and (max-width:1366px) {
+            height: 20px * 2; line-height: 20px !important;
+        }
+        @media screen and (max-width:1024px) {
+            height: 24px * 2; line-height: 24px !important;
+        }
+        @media screen and (max-width:601px) {
+            height: auto;
+        }
+    }
+}
+.ix-news-nav{
+    border-left: 1px solid $hc1;
+    li{ position: relative; width: 25%; border-right: 1px solid $hc1; border-bottom: 1px solid $hc1; @include bs; float: left; font-size: 18px; color: $fc3; text-align: center; cursor: pointer;
+        @media screen and (max-width:1366px) {
+            font-size: 16px;
+        }
+        @media screen and (max-width:481px) {
+            font-size: 14px;
+        }
+        &.act{ background: $mc1; color: #fff; 
+            .sj{ transform: none; @include show; }
+        }
+        @media screen and (min-width:1025px) {
+            &:hover:not(.act){
+                color: $mc1;
+            }
+        }
+    }
+    .nowti{ line-height: 44px; 
+        @media screen and (max-width:1366px) {
+            line-height: 38px;
+        }
+        @media screen and (max-width:1024px) {
+            line-height: 44px;
+        }
+    }
+    .sj{ display: block; position: absolute; left: 50%; top: 100%; margin-left: -5px; border-left-width: 5px; border-right-width: 5px; border-top-width: 5px; color: $mc1; transform: translateY(-10px); @include hide; @include mt3; }
+}
+.ix-news{ margin-top: 20px; border-top: 1px solid $hc1;
+    @media screen and (max-width:1366px) {
+        margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        margin-top: 20px;
+    }
+    .ix-news-nav{ margin-bottom: 25px; 
+        @media screen and (max-width:1366px) {
+            margin-bottom: 15px;
+        }
+        @media screen and (max-width:1024px) {
+            margin-bottom: 25px;
+        }
+        @media screen and (max-width:601px) {
+            margin-bottom: 4.17vw;
+        }
+    }
+}
+.ix-news-list{
+    a{ display: block; padding-right: 40px; overflow: hidden; line-height: 24px; 
+        @media screen and (max-width:1366px) {
+            padding-right: 30px;
+        }
+        @media screen and (max-width:601px) {
+            padding-right: 0;
+        }
+        @media screen and (min-width:1025px) {
+            &:hover{
+                color: $mc1;
+                .date{ color: $mc1; }
+                .nowti:before{ background: $mc1; }
+            }
+        }
+        + a{ margin-top: 5px; 
+            @media screen and (max-width:1366px) {
+                margin-top: 3px;
+            }
+            @media screen and (max-width:1024px) {
+                margin-top: 5px;
+            }
+        }
+    }
+    .date{ float: right; margin-left: 20px; font-size: 12px; color: $fc3; @include mt3; }
+    .nowti{ padding-left: 20px; position: relative; line-height: 24px; 
+        @media screen and (max-width:601px) {
+            padding-left: 15px;
+        }
+        &:before{ @include ba; left: 3px; top: 50%; margin-top: -2px; width: 4px; height: 4px; background: $fc3; @include mt3; 
+            @media screen and (max-width:601px) {
+                left: 0;
+            }
+        }
+    }
+    li{ display: none; }
+}
+.ix1{ padding: 80px 0; 
+    @media screen and (max-width:601px) {
+        padding: 13.33vw 0;
+    }
+}
+.ix-pro-list{
+    .item > a{ display: block; border-bottom: 10px solid $mc1; position: relative; 
+        @media screen and (min-width:1025px) {
+            &:hover{
+                .txts{ transform: translateX(20px); }
+            }
+        }
+        @media screen and (max-width:861px) {
+            border: none;
+        }
+    }
+    .pai{ padding-bottom: (740 / 1920) * 100%; }
+    .txts{ position: absolute; bottom: -10px; left: 50%; margin-left: -600px; padding: 25px 40px 0 40px; width: 478px; height: 184px; border-bottom: 10px solid $mc2; background: #fff; background: rgba(255,255,255,.9); @include bs; @include mt3; 
+        @media screen and (max-width:1366px) {
+            margin-left: -500px;
+        }
+        @media screen and (max-width:1024px) {
+            left: 5%; margin: 0;
+        }
+        @media screen and (max-width:861px) {
+            position: static; width: auto; height: auto; padding: 25px 5% 35px 5%; border: none;
+        }
+        @media screen and (max-width:601px) {
+            padding-top: 4.17vw; padding-bottom: 5.83vw;
+        }
+    }
+    .nowti{ margin-bottom: 24px - 8px; font-size: 20px; font-weight: bold; color: $fc1; line-height: 24px; 
+        @media screen and (max-width:601px) {
+            margin-bottom: 2.67vw;
+        }
+    }
+    .icon{ float: right; margin-left: 10px; font-size: 12px; color: $mc1; font-weight: bold; }
+    .tx{ max-height: 24px * 3; }
+    .slick-arrow{ bottom: 30px; left: auto; right: 50%; margin: 0 -600px 0 0; 
+        @media screen and (max-width:1366px) {
+            margin-right: -500px;
+        }
+        @media screen and (max-width:1024px) {
+            margin-right: 0; right: 5%;
+        }
+        @media screen and (max-width:861px) {
+            display: none !important; 
+        }
+    }
+    .slick-prev{ margin-right: -540px; 
+        @media screen and (max-width:1366px) {
+            margin-right: 60px;
+        }
+    }
+    .slick-dots{ display: none !important; position: static; background: $hc3; padding-top: 30px;
+        @media screen and (max-width:861px) {
+            display: block !important; 
+        }
+        @media screen and (max-width:601px) {
+            padding-top: 5vw;
+        }
+        li{ background: $mc1; }
+        .slick-active{ background: $mc2; }
+    }
+}
+.info-list{
+    margin-left: -25px;
+    li{ width: 33.33%; float: left; 
+        @media screen and (max-width:861px) {
+            width: 100%; float: none;
+            + li{ margin-top: 35px; 
+                @media screen and (max-width:601px) {
+                    margin-top: 5.83vw;
+                }
+            }
+        }
+    }
+    .ma{ margin-left: 25px; }
+    h3.nowti{ position: relative; margin-bottom: 10px; padding-left: 30px; font-size: 16px; color: $fc1; line-height: 24px; 
+        &:before{ @include ba; left: 0; top: 50%; margin-top: -6px; @include c(6px); border: 3px solid $mc1; }
+    }
+    .icon{ float: right; margin-left: 10px; color: $fc3; 
+        @media screen and (min-width:1025px) {
+            &:hover{ color: $mc1; }
+        }
+    }
+    .pai{ padding-bottom: (176 / 384) * 100%; 
+        @media screen and (max-width:861px) {
+            display: none;
+        }
+        @media screen and (max-width:481px) {
+            display: block;
+        }
+    }
+    .ix-news-list{ height: 210px; padding: 31px - 6px 0 0 20px; @include bs; background: #fff; overflow: hidden; 
+        @media screen and (max-width:861px) {
+            height: auto; padding-bottom: 25px;
+        }
+        @media screen and (max-width:601px) {
+            padding-left: 5%; padding-right: 5%;
+        }
+        a + a{ margin-top: 10px; }
+    }
+}
+.ix-party{
+    a{ display: block; padding-bottom: (165 / 1200) * 100%; }
+}
+.ix3{ padding: 70px 0 100px 0; 
+    @media screen and (max-width:601px) {
+        padding: 11.67vw 0 16.67vw 0;
+    }
+    .ix-party{ margin-top: 50px; 
+        @media screen and (max-width:601px) {
+            margin-top: 8.33vw;
         }
     }
 }
