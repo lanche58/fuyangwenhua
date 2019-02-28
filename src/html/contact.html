@@ -1,0 +1,49 @@
+@@include('./top.html')
+</head>
+<body>
+@@include('./header.html',{
+    "contact": "act"
+})
+<div class="page-top">
+    @@include('./pbanner.html',{
+        "img": "cta_banner.jpg",
+        "ch": "联系我们",
+        "en": "Contact us"
+    })
+    <div class="pnav">
+        <ul class="fib">
+            <li class="ib"><a href="contact.html" class="act">人力资源</a></li>
+            <li class="ib"><a href="contact1.html">联系方式</a></li>
+        </ul>
+    </div>
+    <!-- pnav -->
+</div>
+<!-- page-top -->
+<div class="container">
+    <div class="cta1 pw">
+        <div class="job-info freeTx">坚持“以人为本”、“德才兼备”的用人标准和“德为首、忠为先、勤为本、能为径”的人才理念<br>
+                树立尊重知识、尊重人才的企业风尚；建立能者上、庸者下的企业用人机制</div>
+    </div>
+    <!-- cta1 -->
+    <div class="cta2 fixbg" style="background-image: url(img/ctafixbg.jpg);">
+        <div class="pw">
+            <div class="job-search clearfix">
+                <ul class="sele-list">
+                    <li><select class="sele"><option>招聘部门</option></select></li> 
+                    <li><select class="sele"><option>岗位类别</option></select></li> 
+                    <li><select class="sele"><option>工作地点</option></select></li> 
+                </ul>
+                <div class="searchBox">
+                    <input type="text" class="inp"/><a href="#" class="search-btn icon iconfont iconsousuo"></a>
+                </div>
+            </div>
+            <!-- job-search -->
+        </div>
+    </div>
+    <!-- cta2 -->
+</div>
+<!-- container -->
+@@include('./footer.html')
+<script src="js/page.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@@include('./top.html')
+</head>
+<body>
+@@include('./header.html',{
+    "contact": "act"
+})
+<div class="page-top">
+    @@include('./pbanner.html',{
+        "img": "cta_banner.jpg",
+        "ch": "联系我们",
+        "en": "Contact us"
+    })
+    <div class="pnav">
+        <ul class="fib">
+            <li class="ib"><a href="contact.html">人力资源</a></li>
+            <li class="ib"><a href="contact1.html" class="act">联系方式</a></li>
+        </ul>
+    </div>
+    <!-- pnav -->
+</div>
+<!-- page-top -->
+<div class="container">
+    <div class="cta3">
+        <div class="pw">
+            <h2 class="contact-title tac">四川符阳文化旅游开发有限公司</h2>
+            <ul class="contact-list clearfix">
+                <li><a href="#">
+                    <i class="icon iconfont icondizhi"></i>
+                    <p class="tii">地址<br>四川省泸州市合江县荔城大道190号</p>
+                </a></li>
+                <li><a href="#" class="na">
+                    <i class="icon iconfont iconzuoji"></i>
+                    <p class="tii">电话<br>0830-5135977</p>
+                </a></li>
+                <li><a href="#">
+                    <i class="icon iconfont iconyouxiang1"></i>
+                    <p class="tii">邮箱<br>fywl0602@163.com</p>
+                </a></li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </div>
+    <!-- cta3 -->
+</div>
+<!-- container -->
+@@include('./footer.html')
+<script src="js/page.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=7d3a4c6e5e8a70dd200a2eeacf8c1b50"></script>
+<script>
+    $(function(){
+        function ShowMap(zuobiao, showmapInfo, zoom) {
+            var arrzuobiao = zuobiao.split(',');
+                var map = new BMap.Map("map");
+            var point = new BMap.Point(arrzuobiao[0], arrzuobiao[1]);
+            var marker = new BMap.Marker(point, {
+                icon: new BMap.Icon("images/mapi.png", new BMap.Size(76, 76))
+            })
+            map.addOverlay(marker);
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+            map.centerAndZoom(point, zoom);
+            map.disableScrollWheelZoom();
+            var opts = {
+                width: 400
+            }
+            var infoWindow = new BMap.InfoWindow(showmapInfo, opts);
+            marker.addEventListener("click", function () {
+                if (w_width>=641) {
+                    map.openInfoWindow(infoWindow,point);
+                }  
+            });
+        };
+        var k='<p style="font-size: 18px; color: #666;">地址：四川省绵阳市游仙区游仙东路89号</p><p style="font-size: 18px; color: #666;">邮编：621000</p>'; 
+        ShowMap('104.018887,30.723201', k, '17');
+    })
+</script>
+</body>
+</html>

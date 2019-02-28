@@ -1,0 +1,78 @@
+@@include('./top.html')
+</head>
+<body>
+@@include('./header.html',{
+    "index": "act"
+})
+<div class="banner-box">
+    <div class="banner cg-s banner-arrow u-slick">
+        <div class="item">
+            <div class="pic2"><img src="img/banner_1.jpg" alt=""></div>
+            <div class="txts">
+                <div class="pw">
+                    <h2 class="ch trans transY">坚持文化传承与创新<br>以高标准、严要求将工作做到至善至美</h2>
+                    <h3 class="en trans transY dly-1">Adhere to cultural heritage and innovation.<br>With high standards and strict demands, we will do our best to the best.</h3>
+                    <div class="more trans transY dly-2"><a href="about1.html" class="btn ab-more">了解更多</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic2"><img src="img/banner_1.jpg" alt=""></div>
+            <div class="txts">
+                <div class="pw">
+                    <h2 class="ch trans transY">坚持文化传承与创新<br>以高标准、严要求将工作做到至善至美</h2>
+                    <h3 class="en trans transY dly-1">Adhere to cultural heritage and innovation.<br>With high standards and strict demands, we will do our best to the best.</h3>
+                    <div class="more trans transY dly-2"><a href="about1.html" class="btn ab-more">了解更多</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+</div>
+<!-- banner-box -->
+<div class="container">
+    
+</div>
+<!-- container -->
+@@include('./footer.html')
+<script src="js/page.js"></script>
+<script>
+    function indexBox() {
+        if(!isMobile){
+            $('.banner').css({ height: w_height - $mtoph });
+            $('.banner .item').css({ height: w_height - $mtoph });
+            setImgMax($('.banner .pic2'), 1920, 900, w_width, w_height - $mtoph);
+        }else{
+            $('.banner').css({ height: 'auto' });
+            $('.banner .item').css({ height: 'auto' });
+            $('.banner .pic2').attr({ 'style': '' });
+        }
+    }
+    indexBox();
+    $(window).resize(function() {
+        indexBox();
+    });
+    $(function(){
+        $('.banner').on('init', function(event, slick, currentSlide, nextSlide) {
+            $('.banner .item').first().addClass('active');
+        });
+
+        // $('.banner .line i').css({width:0}).stop().animate({width:100+'%'},4800,'linear');
+
+        $('.banner').slick({
+            speed: 1000,
+            arrows: true,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            fade: true,
+            pauseOnHover: false
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            $('.banner .item').removeClass('active');
+            $('.banner .item').eq(nextSlide).addClass('active');
+            // $('.banner .line i').css({width:0}).stop().animate({width:100+'%'},5800,'linear');
+        });
+    })
+</script>
+</body>
+</html>
