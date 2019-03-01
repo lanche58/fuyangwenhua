@@ -101,10 +101,14 @@
     transition: 300ms; }
     @media screen and (max-width: 1024px) {
       .top-search .top-search-box {
-        display: flex;
         width: 100vw;
         right: -60px;
-        box-sizing: border-box; } }
+        box-sizing: border-box;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        transition: 0ms;
+        display: none; } }
     .top-search .top-search-box input {
       float: left;
       width: 170px;
@@ -113,12 +117,13 @@
       border: 1px solid #fff;
       border-right: none;
       background: #fff;
+      box-sizing: border-box;
       transition: 300ms; }
       .top-search .top-search-box input:focus {
         border-color: #ffbb20; }
       @media screen and (max-width: 1024px) {
         .top-search .top-search-box input {
-          flex: 1; } }
+          width: 100%; } }
     .top-search .top-search-box .icon {
       float: left;
       width: 30px;
@@ -130,6 +135,12 @@
       @media screen and (min-width: 1025px) {
         .top-search .top-search-box .icon:hover {
           background: #ffbb20; } }
+      @media screen and (max-width: 1024px) {
+        .top-search .top-search-box .icon {
+          float: none;
+          position: absolute;
+          top: 10px;
+          right: 10px; } }
   @media screen and (min-width: 1025px) {
     .top-search:hover {
       background: #ffbb20; }
@@ -137,10 +148,6 @@
         transform: none;
         opacity: 1;
         visibility: visible; } }
-  .top-search.active .top-search-box {
-    transform: none;
-    opacity: 1;
-    visibility: visible; }
 
 .menuBox {
   right: -360px;
@@ -2585,10 +2592,21 @@
   padding: 40px 80px 80px 80px;
   margin-top: 2px;
   display: none; }
+  @media screen and (max-width: 1024px) {
+    .job-list .b {
+      padding-left: 5%;
+      padding-right: 5%; } }
+  @media screen and (max-width: 601px) {
+    .job-list .b {
+      padding-top: 6.67vw;
+      padding-bottom: 13.33vw; } }
 
 .job-list .set-email {
   margin-top: 80px;
   color: #fff; }
+  @media screen and (max-width: 601px) {
+    .job-list .set-email {
+      margin-top: 13.33vw; } }
 
 .set-email {
   display: block;
@@ -2598,6 +2616,11 @@
   color: #fff;
   line-height: 46px;
   text-align: center; }
+  @media screen and (max-width: 601px) {
+    .set-email {
+      width: 136px;
+      height: 42px;
+      line-height: 42px; } }
   @media screen and (min-width: 1025px) {
     .set-email:hover {
       background: #ffbb20; } }

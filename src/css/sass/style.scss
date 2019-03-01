@@ -73,17 +73,20 @@
     .top-search-box{
         position: absolute; top: 100%; right: 0; width: 200px; padding: 10px; background: $hc3; transform: translateX(-20px); @include hide; @include mt3;
         @media screen and (max-width:1024px) {
-            display: flex; width: 100vw; right: -60px; @include bs;
+            width: 100vw; right: -60px; @include bs; transform: none; @include show; transition: 0ms; display: none;
         }
-        input{ float: left; width: 170px; height: 30px; padding: (30px - 2px - 24px) / 2 10px; border: 1px solid #fff; border-right: none; background: #fff; @include mt3; 
+        input{ float: left; width: 170px; height: 30px; padding: (30px - 2px - 24px) / 2 10px; border: 1px solid #fff; border-right: none; background: #fff; @include bs; @include mt3; 
             &:focus{ border-color: $mc2; }
             @media screen and (max-width:1024px) {
-                flex: 1;
+                width: 100%;
             }
         }
         .icon{ float: left; width: 30px; height: 30px; background: $mc1; text-align: center; line-height: 30px; color: #fff; 
             @media screen and (min-width:1025px) {
                 &:hover{ background: $mc2; }
+            }
+            @media screen and (max-width:1024px) {
+                float: none; position: absolute; top: 10px; right: 10px;
             }
         }
     }
@@ -92,9 +95,9 @@
             .top-search-box{ transform: none; @include show; }
         }
     }
-    &.active{
-        .top-search-box{ transform: none; @include show; }
-    }
+    // &.active{
+    //     .top-search-box{ transform: none; @include show; }
+    // }
 }
 .menuBox{
     right: -360px; width: 360px; background: $hc3;
@@ -1707,10 +1710,23 @@
     }
     .b{
         background: #fff; padding: 40px 80px 80px 80px; margin-top: 2px; display: none;
+        @media screen and (max-width:1024px) {
+            padding-left: 5%; padding-right: 5%;
+        }
+        @media screen and (max-width:601px) {
+            padding-top: 6.67vw; padding-bottom: 13.33vw;
+        }
     }
-    .set-email{ margin-top: 80px; color: #fff; }
+    .set-email{ margin-top: 80px; color: #fff; 
+        @media screen and (max-width:601px) {
+            margin-top: 13.33vw;
+        }
+    }
 }
 .set-email{ display: block; width: 176px; height: 46px; background: $mc1; color: #fff; line-height: 46px; text-align: center; 
+    @media screen and (max-width:601px) {
+        width: 136px; height: 42px; line-height: 42px;
+    }
     @media screen and (min-width:1025px) {
         &:hover{ background: $mc2; }
     }
