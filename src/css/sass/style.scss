@@ -559,10 +559,7 @@
         @media screen and (max-width:1366px) {
             padding-top: 8%;
         }
-        @media screen and (max-width:861px) {
-            padding-top: 10%;
-        }
-        @media screen and (max-width:481px) {
+        @media screen and (max-width:1024px) {
             padding-top: 0; top: 50%; transform: translateY(-50%);
         }
     }
@@ -579,10 +576,14 @@
         @media screen and (max-width:481px) {
             font-size: 18px;
         }
-        &:before{ @include ba; top: 5px; right: 100%; margin-right: 20px; width: 30px; height: 59px; background: url(../images/seal.png) no-repeat; 
-            @media screen and (max-width:1024px) {
-                display: none;
-            }
+    }
+    .chapter{
+        display: inline-block; vertical-align: bottom; margin: 0 0 10px 10px; width: 20px; height: 40px; background: url(../images/seal.png) no-repeat; 
+        @media screen and (max-width:1366px) {
+            margin-bottom: 4px;
+        }
+        @media screen and (max-width:1024px) {
+            display: none;
         }
     }
     .en{ margin-bottom: 50px; font-size: 18px; line-height: 1.2; 
@@ -1905,7 +1906,9 @@
     .item > a{ display: block; border-bottom: 10px solid $mc1; position: relative; 
         @media screen and (min-width:1025px) {
             &:hover{
-                .txts{ transform: translateX(20px); }
+                .txts{ height: 184px; padding-top: 25px; background: #fff; background: rgba(255,255,255,.9); border-bottom: 10px solid $mc2; color: $fc2; }
+                .nowti{ color: $fc1; }
+                .icon{ color: $mc1; }
             }
         }
         @media screen and (max-width:861px) {
@@ -1913,7 +1916,7 @@
         }
     }
     .pai{ padding-bottom: (740 / 1920) * 100%; }
-    .txts{ position: absolute; bottom: -10px; left: 50%; margin-left: -600px; padding: 25px 40px 0 40px; width: 478px; height: 184px; border-bottom: 10px solid $mc2; background: #fff; background: rgba(255,255,255,.9); @include bs; @include mt3; 
+    .txts{ position: absolute; bottom: -10px; left: 50%; margin-left: -600px; padding: 22px 40px 0 40px; width: 478px; height: 68px; background: $mc2; color: #fff; @include bs; @include mt4; 
         @media screen and (max-width:1366px) {
             margin-left: -500px;
         }
@@ -1927,12 +1930,12 @@
             padding-top: 4.17vw; padding-bottom: 5.83vw;
         }
     }
-    .nowti{ margin-bottom: 24px - 8px; font-size: 20px; font-weight: bold; color: $fc1; line-height: 24px; 
+    .nowti{ margin-bottom: 24px - 8px; font-size: 20px; font-weight: bold; line-height: 24px; 
         @media screen and (max-width:601px) {
             margin-bottom: 2.67vw;
         }
     }
-    .icon{ float: right; margin-left: 10px; font-size: 12px; color: $mc1; font-weight: bold; }
+    .icon{ float: right; margin-left: 10px; font-size: 12px; font-weight: bold; }
     .tx{ max-height: 24px * 3; }
     .slick-arrow{ bottom: 30px; left: auto; right: 50%; margin: 0 -600px 0 0; 
         @media screen and (max-width:1366px) {
@@ -1947,7 +1950,7 @@
     }
     .slick-prev{ margin-right: -540px; 
         @media screen and (max-width:1366px) {
-            margin-right: 60px;
+            margin-right: 60px - 500px;
         }
     }
     .slick-dots{ display: none !important; position: static; background: $hc3; padding-top: 30px;

@@ -877,10 +877,7 @@
   @media screen and (max-width: 1366px) {
     .banner .txts {
       padding-top: 8%; } }
-  @media screen and (max-width: 861px) {
-    .banner .txts {
-      padding-top: 10%; } }
-  @media screen and (max-width: 481px) {
+  @media screen and (max-width: 1024px) {
     .banner .txts {
       padding-top: 0;
       top: 50%;
@@ -906,18 +903,20 @@
   @media screen and (max-width: 481px) {
     .banner .ch {
       font-size: 18px; } }
-  .banner .ch:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: 100%;
-    margin-right: 20px;
-    width: 30px;
-    height: 59px;
-    background: url(../images/seal.png) no-repeat; }
-    @media screen and (max-width: 1024px) {
-      .banner .ch:before {
-        display: none; } }
+
+.banner .chapter {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 0 10px 10px;
+  width: 20px;
+  height: 40px;
+  background: url(../images/seal.png) no-repeat; }
+  @media screen and (max-width: 1366px) {
+    .banner .chapter {
+      margin-bottom: 4px; } }
+  @media screen and (max-width: 1024px) {
+    .banner .chapter {
+      display: none; } }
 
 .banner .en {
   margin-bottom: 50px;
@@ -2922,7 +2921,16 @@
   position: relative; }
   @media screen and (min-width: 1025px) {
     .ix-pro-list .item > a:hover .txts {
-      transform: translateX(20px); } }
+      height: 184px;
+      padding-top: 25px;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 10px solid #ffbb20;
+      color: #666; }
+    .ix-pro-list .item > a:hover .nowti {
+      color: #333; }
+    .ix-pro-list .item > a:hover .icon {
+      color: #2074b2; } }
   @media screen and (max-width: 861px) {
     .ix-pro-list .item > a {
       border: none; } }
@@ -2935,14 +2943,13 @@
   bottom: -10px;
   left: 50%;
   margin-left: -600px;
-  padding: 25px 40px 0 40px;
+  padding: 22px 40px 0 40px;
   width: 478px;
-  height: 184px;
-  border-bottom: 10px solid #ffbb20;
-  background: #fff;
-  background: rgba(255, 255, 255, 0.9);
+  height: 68px;
+  background: #ffbb20;
+  color: #fff;
   box-sizing: border-box;
-  transition: 300ms; }
+  transition: 400ms; }
   @media screen and (max-width: 1366px) {
     .ix-pro-list .txts {
       margin-left: -500px; } }
@@ -2966,7 +2973,6 @@
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: bold;
-  color: #333;
   line-height: 24px; }
   @media screen and (max-width: 601px) {
     .ix-pro-list .nowti {
@@ -2976,7 +2982,6 @@
   float: right;
   margin-left: 10px;
   font-size: 12px;
-  color: #2074b2;
   font-weight: bold; }
 
 .ix-pro-list .tx {
@@ -3002,7 +3007,7 @@
   margin-right: -540px; }
   @media screen and (max-width: 1366px) {
     .ix-pro-list .slick-prev {
-      margin-right: 60px; } }
+      margin-right: -440px; } }
 
 .ix-pro-list .slick-dots {
   display: none !important;
