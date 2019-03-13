@@ -2016,3 +2016,25 @@
         }
     }
 }
+
+.serachT { font: 36px/1.5 "Microsoft JhengHei"; color: $mc1; padding: 6% 0px; }
+.serachI { background-color: #cde0f5; color: $mc1; padding: 36px 30px; line-height: 30px; margin-bottom: 8%; }
+.serachI .snum { font-style: italic; padding-left: 12px; }
+.serachI .stxt { border: 1px solid #b8c9dc; padding: 0px 17px; height: 30px; width: 30%; float: left; color: #6D6B6B; }
+.serachI .stxt:focus { box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.6); }
+.serachI .sbtn { background-color: $mc1; color: #fff; overflow: hidden; text-align: center; width: 85px; border: 0px none; height: 32px; line-height: 32px; float: left; margin-left: 14px; }
+.serachlist a:link, .serachlist a:visited { color: #a9a9a9; }
+.serachlist a:active, .serachlist a:hover { color: #767676; }
+.serachlist dd { border-bottom: 1px solid #cccccc; font-size: 14px; color: #a9a9a9; padding-bottom: 24px; margin-bottom: 30px; }
+.serachlist dd .num { float: left; display: block; padding-right: 26px; font-size: 18px; line-height: 1.4; }
+.serachlist dd .blue { color: $mc1; text-decoration: underline; }
+.sear1{ padding-bottom: 80px; }
+.sear1 .serachlist{ overflow: hidden; margin-bottom: 36px; }
+@media screen and (max-width:1024px) {
+    .serachI .stxt { width: 45%; }
+    .serachI .snum { display: block; padding: 10px 0px 0px 0px; width: 100%; clear: both; font-size: 18px; }
+    .serachT { font-size: 30px; }
+}
+@media screen and (max-width:641px) {
+    .serachT { font-size: 28px; }
+}
