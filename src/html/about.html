@@ -180,7 +180,7 @@
             var hash = $(this).attr('href').split('#')[1];
             if(hash){
                 e.preventDefault();
-                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 0);
             }
         });
 
@@ -196,7 +196,7 @@
                     $(this).hide();
                 });
                 navItem = 0;
-                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 800);
+                $('html,body').animate({scrollTop: $('#' + hash).offset().top - $mtoph}, 0);
             }
         });
     })
