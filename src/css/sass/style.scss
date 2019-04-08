@@ -1926,7 +1926,7 @@
             margin-left: -500px;
         }
         @media screen and (max-width:1024px) {
-            left: 5%; margin: 0;
+            left: 0; margin: 0;
         }
         @media screen and (max-width:861px) {
             position: static; width: auto; height: auto; padding: 25px 5% 35px 5%; border: none;
@@ -1942,23 +1942,13 @@
     }
     .icon{ float: right; margin-left: 10px; font-size: 12px; font-weight: bold; }
     .tx{ max-height: 24px * 3; }
-    .slick-arrow{ bottom: 30px; left: auto; right: 50%; margin: 0 -600px 0 0; 
-        @media screen and (max-width:1366px) {
-            margin-right: -500px;
-        }
-        @media screen and (max-width:1024px) {
-            margin-right: 0; right: 5%;
-        }
+    .slick-arrow{ bottom: 30px; left: auto; right: 30px; 
         @media screen and (max-width:861px) {
             display: none !important; 
         }
     }
-    .slick-prev{ margin-right: -540px; 
-        @media screen and (max-width:1366px) {
-            margin-right: 60px - 500px;
-        }
-    }
-    .slick-dots{ display: none !important; position: static; background: $hc3; padding-top: 30px;
+    .slick-prev{ margin-right: 60px; }   
+    .slick-dots{ display: none !important; position: static; padding-top: 30px;
         @media screen and (max-width:861px) {
             display: block !important; 
         }
@@ -1967,6 +1957,14 @@
         }
         li{ background: $mc1; }
         .slick-active{ background: $mc2; }
+    }
+}
+.ix2{
+    @media screen and (max-width:861px) {
+        padding-bottom: 70px;
+    }
+    @media screen and (max-width:601px) {
+        padding-bottom: 11.67vw;
     }
 }
 .info-list{
@@ -2012,6 +2010,9 @@
     a{ display: block; padding-bottom: (165 / 1200) * 100%; }
 }
 .ix3{ padding: 70px 0 100px 0; 
+    @media screen and (max-width:861px) {
+        background: $hc3;
+    }
     @media screen and (max-width:601px) {
         padding: 11.67vw 0 16.67vw 0;
     }

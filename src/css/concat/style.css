@@ -2951,7 +2951,7 @@
       margin-left: -500px; } }
   @media screen and (max-width: 1024px) {
     .ix-pro-list .txts {
-      left: 5%;
+      left: 0;
       margin: 0; } }
   @media screen and (max-width: 861px) {
     .ix-pro-list .txts {
@@ -2986,29 +2986,17 @@
 .ix-pro-list .slick-arrow {
   bottom: 30px;
   left: auto;
-  right: 50%;
-  margin: 0 -600px 0 0; }
-  @media screen and (max-width: 1366px) {
-    .ix-pro-list .slick-arrow {
-      margin-right: -500px; } }
-  @media screen and (max-width: 1024px) {
-    .ix-pro-list .slick-arrow {
-      margin-right: 0;
-      right: 5%; } }
+  right: 30px; }
   @media screen and (max-width: 861px) {
     .ix-pro-list .slick-arrow {
       display: none !important; } }
 
 .ix-pro-list .slick-prev {
-  margin-right: -540px; }
-  @media screen and (max-width: 1366px) {
-    .ix-pro-list .slick-prev {
-      margin-right: -440px; } }
+  margin-right: 60px; }
 
 .ix-pro-list .slick-dots {
   display: none !important;
   position: static;
-  background: #f2f2f2;
   padding-top: 30px; }
   @media screen and (max-width: 861px) {
     .ix-pro-list .slick-dots {
@@ -3020,6 +3008,14 @@
     background: #2074b2; }
   .ix-pro-list .slick-dots .slick-active {
     background: #ffbb20; }
+
+@media screen and (max-width: 861px) {
+  .ix2 {
+    padding-bottom: 70px; } }
+
+@media screen and (max-width: 601px) {
+  .ix2 {
+    padding-bottom: 11.67vw; } }
 
 .info-list {
   margin-left: -25px; }
@@ -3092,6 +3088,9 @@
 
 .ix3 {
   padding: 70px 0 100px 0; }
+  @media screen and (max-width: 861px) {
+    .ix3 {
+      background: #f2f2f2; } }
   @media screen and (max-width: 601px) {
     .ix3 {
       padding: 11.67vw 0 16.67vw 0; } }
